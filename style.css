@@ -1,3 +1,19 @@
+/* Link Section */
+.link-section {
+    margin: 15px 0;
+}
+
+.btn-link {
+    text-decoration: none;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    padding: 10px 100px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color:  #0047AB; 
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.6);
+    transition: 0.3s;
+}
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -5,17 +21,10 @@ html {
 }
 
 body {
-background: radial-gradient(circle, #24246e, #06051f);
+background: #000000;
     margin: 0
 }
-.navigations {
-    display: flex;
-    background: radial-gradient(circle, #24246e, #06051f);
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    margin-bottom: 30px;
-  }
+
   .logo img {
     max-width: 200px;
   }
@@ -423,7 +432,7 @@ input[type=radio]:focus {
     font-size: 15px;
     line-height: 1.42857143;
     color: rgb(25, 103, 210);
-    background-color: #fff;
+    background-color: #222;
     background-image: none;
     border: 1px solid #dce4ec;
     border-radius: 4px;
@@ -466,7 +475,7 @@ input[type=radio]:focus {
 }
 
 textarea.form-control {
-    height: auto
+    height: 335px
 }
 
 input[type=search] {
@@ -564,39 +573,40 @@ input[type=radio][disabled] {
 
 .btn-primary {
     color: #fff;
-    background-color: #264073;
-    border-color:#000000;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    border-color: #000000;
 }
 
 .btn-primary:focus {
     color: #fff;
-    background-color: #264073;
-    border-color: #000
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    border-color: #000;
 }
 
 .btn-primary:active,
 .btn-primary:hover {
     color: #fff;
-    background-color: #264073;
+    background: linear-gradient(45deg, #0047AB, #002D72); /* Cobalt Blue Gradient */
     border-color: #fff;
 }
 
 .btn-primary:active:focus,
 .btn-primary:active:hover {
     color: #fff;
-    background-color: #264073;
+    background: linear-gradient(45deg, #0047AB, #002D72); /* Cobalt Blue Gradient */
     border-color: #fff;
 }
 
 .btn-primary:active {
-    background-image: none
+    background: linear-gradient(45deg, #0047AB, #002D72);
 }
 
 .btn-primary[disabled]:focus,
 .btn-primary[disabled]:hover {
-    background-color: #2c3e50;
-    border-color: #2c3e50
+    background: #2c3e50;
+    border-color: #2c3e50;
 }
+
 
 .btn-block {
     display: block;
@@ -664,7 +674,7 @@ input[type=submit].btn-block {
     line-height: 1;
     color: #2c3e50;
     text-align: center;
-    background-color: #ecf0f1;
+    background-color: ##1f1f22;
     border: 1px solid #dce4ec;
     border-radius: 4px
 }
