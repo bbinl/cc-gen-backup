@@ -4,26 +4,48 @@
 }
 
 .btn-link {
+    display: inline-block;
     text-decoration: none;
     background: linear-gradient(45deg, #ffcc00, #ff6600);
-    padding: 10px 100px;
+    padding: 10px 100px; /* সুন্দর প্যাডিং */
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
-    color:  #0047AB; 
-    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.6);
-    transition: 0.3s;
+    color: #0047AB;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent; /* নরমাল অবস্থায় ট্রান্সপ্যারেন্ট বর্ডার */
+    
 }
 
-.link{
-		color: #fff;
-		text-decoration:none;
-		font-family:Lato;
-		}
-		.link:hover{
-			color:#fff;
-			text-decoration:none;
-			}
+/* Hover effect */
+.btn-link:hover {
+    background: #fa0202; /* কোবল্ট ব্লু ব্যাকগ্রাউন্ড */
+    color: #ffffff; /* সাদা টেক্সট */
+    border: 2px solid #ffffff; /* সাদা বর্ডার যখন হোভার হবে */
+}
+
+textarea {
+    resize: both; /* অনুভূমিক এবং উল্লম্ব সাইজ রিসাইজ করার অনুমতি */
+}
+
+a {
+    color: #ffffff !important; /* ডিফল্ট রঙ সাদা */
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #ffffff !important; /* হোভার হলে লাল হবে */
+    text-decoration: underline;
+}
+
+.btn-primary:active,
+.btn-primary:hover {
+    color: #fff;
+    background: #ff0000; /* Cobalt Blue Gradient */
+    border-color: #fff;
+}
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -161,7 +183,6 @@ textarea {
     overflow: auto
 }
 
-
 @media print {
     *,
     :after,
@@ -229,21 +250,6 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit
-}
-/* link hover color*/
-a {
-    color: #fa0202;
-}
-
-a:focus,
-a:hover {
-    color: #fa0202;
-    text-decoration: underline
-}
-
-a:focus {
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px
 }
 
 img {
@@ -442,8 +448,8 @@ input[type=radio]:focus {
     padding: 10px 15px;
     font-size: 15px;
     line-height: 1.42857143;
-    color: rgb(25, 103, 210);
-    background-color: #222;
+    color: rgb(0 255 250);
+    background-color: #000000;
     background-image: none;
     border: 1px solid #dce4ec;
     border-radius: 4px;
@@ -592,13 +598,6 @@ input[type=radio][disabled] {
     color: #fff;
     background: linear-gradient(45deg, #ffcc00, #ff6600);
     border-color: #000;
-}
-
-.btn-primary:active,
-.btn-primary:hover {
-    color: #fff;
-    background: linear-gradient(45deg, #0047AB, #002D72); /* Cobalt Blue Gradient */
-    border-color: #fff;
 }
 
 .btn-primary:active:focus,
@@ -815,15 +814,6 @@ body {
     background-color: #222;
     font-family: sans-serif
 	color:#264073;
-}
-
-a {
-    text-decoration: none;
-    color:#264073;
-}
-
-textarea {
-    resize: none
 }
 
 .form-group .form-control {
