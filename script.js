@@ -8,7 +8,7 @@
             l: !1,
             exports: {}
         };
-        return t[r].call(i.exports, i, i.exports, n), i.l = !0, i.exports;
+        return t[r].call(i.exports, i, i.exports, n), i.l = !0, i.exports
     }
     n.m = t, n.c = e, n.d = function(t, e, r) {
         n.o(t, e) || Object.defineProperty(t, e, {
@@ -478,7 +478,7 @@
                     configurable: !0
                 })
             }
-            var H, z = new RegExp("[^a-zA-ZÂ·Ã€-Ã–Ã˜-Ã¶Ã¸-Í½Í¿-á¿¿â€Œ-â€â€¿-â€â°-â†â°€-â¿¯ã€-íŸ¿ï¤€-ï·ï·°-ï¿½.$_\\d]"),
+            var H, z = new RegExp("[^a-zA-Z·À-ÖØ-öø-ͽͿ-῿‌-‍‿-⁀⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�.$_\\d]"),
                 K = "__proto__" in {},
                 V = "undefined" != typeof window,
                 q = "undefined" != typeof WXEnvironment && !!WXEnvironment.platform,
@@ -3306,7 +3306,7 @@ function Ti(t, e) {
                 _o = h("address,article,aside,base,blockquote,body,caption,col,colgroup,dd,details,dialog,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,head,header,hgroup,hr,html,legend,li,menuitem,meta,optgroup,option,param,rp,rt,source,style,summary,tbody,td,tfoot,th,thead,title,tr,track"),
                 bo = /^\s*([^\s"'<>\/=]+)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/,
                 wo = /^\s*((?:v-[\w-]+:|@|:|#)\[[^=]+\][^\s"'<>\/=]*)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/,
-                $o = "[a-zA-Z_][\\-\\.0-9_a-zA-Za-zA-ZÂ·Ã€-Ã–Ã˜-Ã¶Ã¸-Í½Í¿-á¿¿â€Œ-â€â€¿-â€â°-â†â°€-â¿¯ã€-íŸ¿ï¤€-ï·ï·°-ï¿½]*",
+                $o = "[a-zA-Z_][\\-\\.0-9_a-zA-Za-zA-Z·À-ÖØ-öø-ͽͿ-῿‌-‍‿-⁀⁰-↏Ⰰ-⿯、-퟿豈-﷏ﷰ-�]*",
                 Co = "((?:" + $o + "\\:)?" + $o + ")",
                 xo = new RegExp("^<" + Co),
                 ko = /^\s*(\/?)>/,
@@ -4629,7 +4629,7 @@ function Ti(t, e) {
                     staticClass: "container text-center"
                 }, [this._m(0), this._v(" "), e("p", {
                     staticClass: "text-muted"
-                }, [this._v("\n            Â© 2017 - " + this._s(this.year) + " namso-gen. All rights reserved.\n        ")])])])
+                }, [this._v("\n            © 2017 - " + this._s(this.year) + " namso-gen. All rights reserved.\n        ")])])])
             }, [function() {
                 var t = this.$createElement,
                     e = this._self._c || t;
@@ -4688,7 +4688,7 @@ function Ti(t, e) {
                         month: "",
                         year: "",
                         ccv2: "",
-                        quantity: 10,
+                        quantity: 15,
                         dateEnabled: !0,
                         ccv2Enabled: !0,
                         creditCards: "",
@@ -4946,6 +4946,10 @@ function Ti(t, e) {
                     }
                 }, [t._v("Random")]), t._v(" "), n("option", {
                     attrs: {
+                        value: "2020"
+                    }
+                }, [t._v("2020")]), t._v(" "), n("option", {
+                    attrs: {
                         value: "2021"
                     }
                 }, [t._v("2021")]), t._v(" "), n("option", {
@@ -5024,27 +5028,7 @@ function Ti(t, e) {
                     attrs: {
                         value: "2040"
                     }
-                }, [t._v("2040")]), t._v(" "), n("option", {
-                    attrs: {
-                        value: "2041"
-                    }
-                }, [t._v("2041")]), t._v(" "), n("option", {
-                    attrs: {
-                        value: "2042"
-                    }
-                }, [t._v("2042")]), t._v(" "), n("option", {
-                    attrs: {
-                        value: "2043"
-                    }
-                }, [t._v("2043")]), t._v(" "), n("option", {
-                    attrs: {
-                        value: "2044"
-                    }        
-                }, [t._v("2044")]), t._v(" "), n("option", {
-                    attrs: {
-                        value: "2045"
-                    }    
-                }, [t._v("2045")])])])])]), t._v(" "), n("div", {
+                }, [t._v("2040")])])])])]), t._v(" "), n("div", {
                     staticClass: "row"
                 }, [n("div", {
                     staticClass: "col-md-8"
