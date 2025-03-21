@@ -230,14 +230,14 @@ textarea {
     font-size: inherit;
     line-height: inherit
 }
-
+/* link hover color*/
 a {
-    color: #18bc9c
+    color: #fa0202;
 }
 
 a:focus,
 a:hover {
-    color: #18bc9c;
+    color: #fa0202;
     text-decoration: underline
 }
 
