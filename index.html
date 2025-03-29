@@ -1,3 +1,5 @@
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,18 +19,40 @@
     <meta name="apple-mobile-web-app-title" content="Team RL Cc Gen">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#000">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 <div id="app">
-  <p align="center"> <font size="70"> bro bin lagbe cc gen</font></p>
+  <nav class="navigations">
+        <div class="site-header">
+            <img src="favicon.png" alt="Logo" class="header-logo">
+            BBINL CC Gen
+        </div>
+    </nav>
 
   <div align="center" class="link-section">
             <a href="https://bbinl.github.io/cc-checker/" class="btn-link" class="link">
                 <i class="fa-solid fa-credit-card"></i> CC Checker
             </a> 
-</div>
+</div>  
+    
+<div class="container">
+        <div class="info">
+            <span>YT Premium BIN:</span>
+            <span class="copy-text" onclick="copyToClipboard(this)"><code>515462002115xxxx</code></span>
+        </div>
+        <div class="info">
+            <span>Canva Pro BIN:</span>
+            <span class="copy-text" onclick="copyToClipboard(this)"><code>Not Available RN</code></span>
+        </div>
+        <div class="info">
+            <span>Hotspot Shield BIN:</span>
+            <span class="copy-text" onclick="copyToClipboard(this)"><code>41546444006xxxxx</code></span>
+        </div>
+    </div>
+    
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -56,6 +80,17 @@ function copy(){
     document.execCommand('copy');
 }
 </script>
+
+  <script>
+        function copyToClipboard(element) {
+            const text = element.innerText;
+            navigator.clipboard.writeText(text).catch(err => {
+                alert('Failed to copy! Please try again.');
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+    
 <script src="script.js"></script>
    </body>
       </html>
