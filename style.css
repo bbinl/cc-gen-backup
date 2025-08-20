@@ -1,4 +1,3 @@
-/* Color Variables (Theme from your previous input) */
 :root {
     --dark-blue: #1a2035;
     --medium-blue: #232a41;
@@ -15,7 +14,7 @@
     --border: var(--light-blue);
     --shadow: rgba(0, 0, 0, 0.3);
     --lighter: var(--medium-blue);
-    --text-muted: #aaaaaa; 
+    --text-muted: #aaaaaa;
     --text: var(--text-color-light);
 }
 
@@ -37,6 +36,7 @@ body {
     background-color: var(--dark-blue);
     margin: 0;
     color: var(--text-color-light);
+    padding: 20px;
 }
 
 /* Layout & Grid System */
@@ -82,9 +82,13 @@ body {
     }
 }
 
+/*
+    *** এইখানে পরিবর্তন করা হয়েছে ***
+    কলামের মাঝখানের গ্যাপ কমানোর জন্য `row` এর নেগেটিভ মার্জিন এবং `col-*` এর প্যাডিং এর মান কমানো হয়েছে।
+*/
 .row {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
 .col-md-4,
@@ -92,14 +96,14 @@ body {
 .col-md-8 {
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*Navigation (Header)*/
 .navigations {
     display: flex;
-    justify-content: space-between; /* এখানে space-between ব্যবহার করা হয়েছে */
+    justify-content: space-between;
     align-items: center;
     background-color: var(--medium-blue);
     padding: 0 2rem;
@@ -127,92 +131,76 @@ body {
     margin-right: 15px;
 }
 
-
-
-
-
-
-
-
-
 .menu-toggle:hover {
-  background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .menu-container {
-  position: relative;
-  display: inline-block;
-  z-index: 999;
+    position: relative;
+    display: inline-block;
+    z-index: 999;
 }
 
 .menu-toggle {
-  font-size: 26px;
-  cursor: pointer;
-  color: white;
-  padding: 8px 12px;
-  transition: background 0.3s;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+    padding: 8px 12px;
+    transition: background 0.3s;
 }
 
 /* Dropdown menu base style */
 .dropdown-menu {
-  position: absolute;
-  right: 0;
-  top: 110%;
-  background-color: #060079;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border-radius: 6px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  min-width: 220px;
-  opacity: 0;
-  transform: translateY(-10px);
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background-color: #060079;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 220px;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
 /* Show dropdown */
 .dropdown-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .dropdown-menu li a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  border-bottom: 1px solid #eee;
-  transition: background 0.2s;
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 .dropdown-menu li:last-child a {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #fa0707;
+    background-color: #fa0707;
 }
 
 .dropdown-menu li:last-child a {
-  border-bottom: none;
+    border-bottom: none;
 }
-
-
-
-
-
-
-
-
 
 /* Form Elements */
 label {
@@ -250,24 +238,20 @@ input[type=search] {
 
 .form-group {
     margin-bottom: 15px;
-    width: 100%; /* BIN ইনপুট যাতে পুরো প্রস্থ নেয় */
+    width: 100%;
 }
 
-/*
-  ** গুরুত্বপূর্ণ ফ্লেক্সবক্স স্টাইলস **
-  এই স্টাইলগুলো `Date`, `CVC` এবং `Quantity` ফিল্ডগুলোকে সব স্ক্রিন সাইজে পাশাপাশি রাখতে সাহায্য করবে।
-*/
 .input-group {
     position: relative;
-    display: flex; 
-    flex-wrap: nowrap; 
-    align-items: center; 
-    gap: 10px; 
-    width: 100%; 
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
 .input-group-addon {
-    width: auto; 
+    width: auto;
     flex-shrink: 0;
     padding: 10px 15px;
     font-size: 15px;
@@ -281,7 +265,7 @@ input[type=search] {
 
 .input-group-field {
     display: flex;
-    flex-grow: 1; 
+    flex-grow: 1;
     min-width: 0;
     vertical-align: middle;
     border-radius: 4px;
@@ -292,7 +276,7 @@ input[type=search] {
 .input-group-field > select.form-control {
     flex-grow: 1;
     min-width: 0;
-    width: auto; 
+    width: auto;
 }
 
 /* CVC ইনপুটকে উপলব্ধ স্থান ব্যবহার করতে দিন */
@@ -301,7 +285,6 @@ input[type=search] {
     min-width: 0;
     width: auto;
 }
-
 
 /* Buttons Styling */
 .btn {
@@ -562,15 +545,19 @@ input[type=search] {
     color: var(--orange-unknown);
 }
 
-/* ** গুরুত্বপূর্ণ পরিবর্তন: রেসপনসিভ ওভাররাইড ** */
+/*
+    *** এইখানেও পরিবর্তন করা হয়েছে ***
+    CVC এবং Quantity ফিল্ডের কলামগুলোকে ছোট স্ক্রিনে নিচে নিচে নিয়ে আসার জন্য
+    প্রয়োজন নেই এমন Flexbox স্টাইলগুলো মুছে ফেলা হয়েছে।
+*/
 @media (max-width: 768px) {
     /* Header layout for small screens */
     .navigations {
-        flex-direction: row; /* কলামের পরিবর্তে সারি ব্যবহার করা হয়েছে */
-        align-items: center; /* আইটেমগুলোকে মাঝ বরাবর অ্যালাইন করা হয়েছে */
-        height: 60px; /* উচ্চতা কিছুটা কমানো হয়েছে */
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
         padding: 0 1rem;
-        justify-content: space-between; /* মেনু টগলকে ডানে ঠেলে দেওয়া হয়েছে */
+        justify-content: space-between;
     }
 
     .site-header {
@@ -585,99 +572,72 @@ input[type=search] {
         margin-right: 10px;
     }
 
-
-
-    /* ** .col-md-X ক্লাসগুলির আচরণ পরিবর্তন করা হয়েছে ছোট স্ক্রিনের জন্য **
-        ** BIN, Date, CVC এবং Quantity ইনপুট ফিল্ডগুলোকে সঠিকভাবে দেখাতে। **
+    /*
+      ** এই ব্লকটি পরিবর্তন করা হয়েছে **
+      .col-md-X ক্লাসগুলো ছোট স্ক্রিনে 100% প্রস্থ নেবে এবং নিচে নিচে চলে আসবে।
+      এজন্য flex-basis, max-width, width, এবং flex-wrap: nowrap স্টাইলগুলো বাদ দেওয়া হয়েছে।
     */
     .col-md-8,
     .col-md-4,
     .col-md-6 {
         width: 100%; /* ছোট স্ক্রিনে 100% প্রস্থ নেবে */
         float: none; /* ফ্লোটিং আচরণ বাতিল করুন */
-        padding-left: 15px;
-        padding-right: 15px;
-        box-sizing: border-box; /* padding যাতে width এর ভেতরে থাকে */
+        padding-left: 15px; /* ডিফল্ট বুটস্ট্র্যাপ প্যাডিং ফিরিয়ে আনা হয়েছে */
+        padding-right: 15px; /* ডিফল্ট বুটস্ট্র্যাপ প্যাডিং ফিরিয়ে আনা হয়েছে */
+        box-sizing: border-box;
     }
 
     /*
-      BIN, Date, CVC, Quantity ফর্ম সেকশনগুলোকে একটি সারি হিসেবে বিবেচনা করার জন্য
-      যেহেতু ফর্মের ভেতরের .row কন্টেইনার .col-md-X কে ধারণ করে,
-      আমরা .row কে flex কন্টেইনার করব যাতে তার চাইল্ড কলামগুলো পাশাপাশি থাকে।
+      ** এই ব্লকটি পরিবর্তন করা হয়েছে **
+      .row কে এখন আর flex কন্টেইনার হতে হবে না।
     */
     .row {
-        display: flex;
-        flex-wrap: wrap; /* ছোট স্ক্রিনে প্রয়োজন হলে নতুন লাইনে যাবে */
-        align-items: flex-start; /* আইটেমগুলোকে উপরে অ্যালাইন করবে */
-        margin-left: -15px; /* বুটস্ট্র্যাপের সারি মার্জিন বজায় রাখতে */
-        margin-right: -15px; /* বুটস্ট্র্যাপের সারি মার্জিন বজায় রাখতে */
+        /* এই মিডিয়া কোয়েরিতে কোনো flexbox স্টাইল দরকার নেই, কারণ কলামগুলো নিচে চলে আসবে */
     }
-
-    /* Date সেকশনের .input-group-field এর ভেতরের select-কে সঠিকভাবে প্রদর্শন */
-    /* যেহেতু Date সেকশনের দুটি `<select>` এর মধ্যে একটি `input-group-field` এর ভেতরে আছে,
-       এবং অন্যটি সরাসরি `input-group` এর চাইল্ড, তাদের দুজনের জন্যই `flex-grow` দরকার।
-    */
+    
     .form-group .input-group > select.form-control,
     .form-group .input-group .input-group-field > select.form-control {
-        flex-grow: 1; /* উপলব্ধ স্থান পূরণ করবে */
-        min-width: 0; /* অতিরিক্ত সঙ্কুচিত হওয়া রোধ করবে */
-        width: auto; /* flex-grow দ্বারা width নিয়ন্ত্রিত হবে */
+        flex-grow: 1;
+        min-width: 0;
+        width: auto;
     }
 
-    /* CVC এবং Quantity ফিল্ডের কলামগুলোকে ছোট স্ক্রিনে পাশাপাশি রাখতে */
+    /*
+      ** এই ব্লকগুলো সম্পূর্ণ বাদ দেওয়া হয়েছে **
+      কারণ এখন আর CVC এবং Quantity ফিল্ডকে ছোট স্ক্রিনে পাশাপাশি থাকার জন্য নির্দিষ্ট প্রস্থের প্রয়োজন নেই।
+    */
     .row > .col-md-8,
     .row > .col-md-4 {
-        /*
-          এই দুটি কলামকে ছোট স্ক্রিনে পাশাপাশি সমানভাবে ভাগ করার জন্য:
-          আমরা চাই CVC একটু বড় হোক (যেমন 60%) এবং Quantity ছোট (40%)।
-          অথবা CVC 70%, Quantity 30%।
-          আগের 50%-50% এর বদলে এখানে CVC কে একটু বেশি জায়গা দেওয়া হয়েছে।
-          CVC (col-md-8) এর জন্য 60%, Quantity (col-md-4) এর জন্য 40% (প্যাডিং অ্যাডজাস্ট করে)।
-        */
-        flex-basis: calc(60% - 15px); /* CVC এর জন্য বেশি প্রস্থ */
-        max-width: calc(60% - 15px);
-        min-width: 210px; /* CVC এর জন্য সর্বনিম্ন প্রস্থ */
+        /* এই স্টাইলগুলো বাদ দেওয়া হয়েছে */
     }
 
-    .row > .col-md-4 {
-        flex-basis: calc(40% - 15px); /* Quantity এর জন্য কম প্রস্থ */
-        max-width: calc(40% - 15px);
-        min-width: 120px; /* Quantity এর জন্য সর্বনিম্ন প্রস্থ */
-    }
-
-
-    /* CVC এর ইনপুট-group-addon (চেকবক্স) এবং ইনপুটকে পাশাপাশি রাখতে */
     .col-md-8 .input-group {
         display: flex;
         align-items: center;
         gap: 10px;
-        flex-wrap: nowrap; /* নিশ্চিত করে যে ইনপুটগুলো নতুন লাইনে না যায় */
-        width: 100%; /* CVC ইনপুট গ্রুপকে পুরো প্রস্থ নিতে দিন */
+        flex-wrap: nowrap;
+        width: 100%;
     }
 
-    /* CVC এর চেকবক্সের প্রস্থ নিয়ন্ত্রণ করুন, যাতে ইনপুট ফিল্ড বেশি জায়গা পায় */
     .col-md-8 .input-group .input-group-addon {
         flex-shrink: 0;
-        width: auto; /* একটি নির্দিষ্ট প্রস্থ সেট করতে পারেন */
-        padding: 10 10px; /* প্যাডিং কমানো যেতে পারে */
+        width: auto;
+        padding: 10px 10px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* CVC এর ইনপুট ফিল্ডকে তার উপলব্ধ স্থানের বেশিরভাগটা নিতে দিন */
     .col-md-8 .input-group input.form-control {
-        flex-grow: 1; /* ইনপুট ফিল্ডটি যতটা সম্ভব স্থান নেবে */
-        width: auto; /* flex-grow দ্বারা width নিয়ন্ত্রিত হবে */
+        flex-grow: 1;
+        width: auto;
     }
 
-    /* BIN ইনপুটকে ছোট স্ক্রিনে পুরো প্রস্থ দিতে */
-    .form-group > input.form-control { /* BIN ইনপুটের জন্য */
+    .form-group > input.form-control {
         width: 100%;
-        box-sizing: border-box; /* নিশ্চিত করুন padding width এর মধ্যে থাকে */
+        box-sizing: border-box;
     }
 
-    /* Quantity ইনপুটকে ছোট স্ক্রিনে পুরো প্রস্থ দিতে যখন তার col-md-4 100% হয় */
     .col-md-4 .form-group > input.form-control {
         width: 100%;
         box-sizing: border-box;
