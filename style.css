@@ -36,7 +36,6 @@ body {
     background-color: var(--dark-blue);
     margin: 0;
     color: var(--text-color-light);
-    padding: 20px;
 }
 
 /* Layout & Grid System */
@@ -643,3 +642,4 @@ input[type=search] {
         box-sizing: border-box;
     }
 }
+
