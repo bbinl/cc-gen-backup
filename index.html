@@ -207,6 +207,37 @@ document.addEventListener('click', function (event) {
     menu.classList.remove('show');
   }
 });
+		// একটি ফাংশন যা ডেভেলপার টুল খোলা আছে কি না তা পরীক্ষা করে
+function checkDevTools() {
+    const threshold = 160; // একটি নির্দিষ্ট উচ্চতা (pixel)
+    // কনসোল খোলা থাকলে, ইন্টেলিজেন্টলি কনসোল হাইট চেক করে
+    if (window.outerHeight - window.innerHeight > threshold || window.outerWidth - window.innerWidth > threshold) {
+        // যদি কনসোল খোলা থাকে, তাহলে এটি একটি ইনফিনিটি লুপে আটকে দেবে
+        while (true) {
+            // কিছুই করবে না, শুধু ব্রাউজারকে ফ্রিজ করে দেবে
+        }
+    }
+}
+
+// প্রতি সেকেন্ডে এই ফাংশনটি চালু করার জন্য
+setInterval(checkDevTools, 1000);
+
+		// একটি নির্দিষ্ট ইউআরএল যেখানে রিডাইরেক্ট করা হবে
+const redirectUrl = 'https://www.google.com';
+
+function handleDevTools() {
+    // এই ডিটেকশন কৌশলটি নির্ভরযোগ্য নয়, এটি শুধুমাত্র একটি উদাহরণ
+    if (window.devtools) { // এই `window.devtools` সব ব্রাউজারে কাজ করে না
+        window.location.href = redirectUrl;
+    }
+}
+
+// পৃষ্ঠা লোড হওয়ার সাথে সাথে এটি পরীক্ষা করবে
+window.addEventListener('load', handleDevTools);
+
+// অথবা, আপনি নিয়মিত বিরতিতে পরীক্ষা করতে পারেন
+setInterval(handleDevTools, 500);
+		
     </script>
     
     <script src="script.js"></script>
