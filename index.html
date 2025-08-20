@@ -186,13 +186,7 @@
     </script>
 
     <script>
-        function copyToClipboard(element) {
-            const text = element.innerText;
-            navigator.clipboard.writeText(text).catch(err => {
-                alert('Failed to copy! Please try again.');
-                console.error('Failed to copy: ', err);
-            });
-        }
+
       
       function toggleMenu() {
   const menu = document.getElementById('dropdown-menu');
@@ -212,4 +206,5 @@ document.addEventListener('click', function (event) {
     <script src="script.js"></script>
 </body>
 </html>
+
 
