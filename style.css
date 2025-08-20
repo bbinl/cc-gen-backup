@@ -316,6 +316,7 @@ input[type=search] {
 .btn-block {
     display: block;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .btn-block+.btn-block {
@@ -642,4 +643,5 @@ input[type=search] {
         box-sizing: border-box;
     }
 }
+
 
